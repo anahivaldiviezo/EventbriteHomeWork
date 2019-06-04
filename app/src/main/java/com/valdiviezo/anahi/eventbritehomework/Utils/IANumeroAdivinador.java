@@ -127,7 +127,7 @@ public class IANumeroAdivinador {
      * Permuta una lista hasta hallar los 4 numeros en el orden correcto.
      * @param adivinadorList
      * @param pensadorList
-     * @return
+     * @return devuelve la lista con el numero correcto
      */
     public List<Integer> permutarNumberList (List <Integer> adivinadorList, List pensadorList) {
         List <Integer> lista = adivinadorList;

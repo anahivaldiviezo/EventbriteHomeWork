@@ -68,7 +68,11 @@ import java.util.List;
         return list;
     }
 
-
+     /**
+      * Convierte los elementos de la lista a un numero
+      * @param list
+      * @return
+      */
     public int listToNumber (List<Integer> list) {
         int num;
         String numero = "";
@@ -79,6 +83,12 @@ import java.util.List;
         return num;
     }
 
+     /**
+      * Compara la lista pensador con la del adivinador
+      * @param listPensador
+      * @param listAdivinador
+      * @return respuesta con la cantidad de cifras regulares, correctas, aciertos
+      */
     public CifrasAcertadas compareNumbers (List<Integer> listPensador, List<Integer> listAdivinador) {
         int cantidadRegular = 0;
         int cantidadCorrectos = 0 ;
