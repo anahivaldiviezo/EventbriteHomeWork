@@ -98,6 +98,7 @@ import java.util.List;
         respuesta.setCantidadNumAciertos(cantidadAciertos);
         respuesta.setCantidadNumRegular(cantidadRegular);
         respuesta.setCantidadNumCorrectos(cantidadCorrectos);
+        respuesta.setNumero(listToNumber(listAdivinador));
         respuesta.setList(listAdivinador);
         return respuesta;
     }

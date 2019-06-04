@@ -2,7 +2,7 @@
     <string name="app_name">Eventbrite HomeWork</string>
     <string name="title_adivinador">Adivinador</string>
     <string name="title_pensador">Pensador</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_notifications">Sobre Mi</string>
 
     <string name="consigna_adivinador"> Consigna : Adivina en que numero de cuatro cifras (que no se repiten) estoy pensando. </string>
     <string name="consigna_pensador"> Consigna : Elige un numero de cuatro cifras (que no se repiten) y yo lo adivinare. </string>
@@ -10,6 +10,10 @@
     <string name="cantidad_correctos">CANTIDAD DE NUMEROS CORRECTOS : </string>
     <string name="cantidad_regulares">CANTIDAD DE NUMEROS REGULARES : </string>
     <string name="ganaste"> ACERTASTE LOS 4 DIGITOS. GANASTE! </string>
+    <string name="gane"> ACERTE LOS 4 DIGITOS. GANE! </string>
+    <string name="sobremi"> Nombre :  Anahi Valdiviezo \n \n Correo : anissval@gmail.com \n \n Gracias por el desafio! </string>
+
+
 
 
     <!-- TODO: Remove or change this placeholder text -->

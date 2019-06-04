@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.navigation_pensador:
                     pushFragment(new PensadorFragment());
                     return true;
-                case R.id.navigation_notifications:
+                case R.id.navigation_sobre_mi:
                     return true;
             }
             return false;
@@ -75,7 +75,9 @@ public class MainActivity extends AppCompatActivity {
                 pushFragment(pensadorFragment);
                 item.setChecked(true);
                 break;
-            case R.id.navigation_notifications:
+            case R.id.navigation_sobre_mi:
+                SobreMiFragment sobreMiFragment = new SobreMiFragment();
+                pushFragment(sobreMiFragment);
                 item.setChecked(true);
                 break;
         }

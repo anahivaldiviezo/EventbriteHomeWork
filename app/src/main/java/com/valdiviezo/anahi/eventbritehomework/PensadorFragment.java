@@ -17,21 +17,18 @@ import android.widget.TextView;
 import com.valdiviezo.anahi.eventbritehomework.Utils.HomeWorkUtils;
 import com.valdiviezo.anahi.eventbritehomework.Utils.IANumeroAdivinador;
 import com.valdiviezo.anahi.eventbritehomework.model.Adivinador;
-import com.valdiviezo.anahi.eventbritehomework.model.CifrasAcertadas;
 import com.valdiviezo.anahi.eventbritehomework.model.Pensador;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class PensadorFragment extends Fragment {
 
     private EditText pensadorNumber;
     private TextView iaNumber;
+    private TextView txtMachineWins;
     private Button sendButton;
     private Pensador pensador = Pensador.getInstance();
     private Adivinador adivinador = Adivinador.getInstance();
     private HomeWorkUtils homeworkUtils = HomeWorkUtils.getInstance();
-    private CifrasAcertadas cifrasAcertadas = new CifrasAcertadas();
     private IANumeroAdivinador iaNumeroAdivinador = IANumeroAdivinador.getInstance();
 
     @Nullable
@@ -45,22 +42,25 @@ public class PensadorFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         pensadorNumber = getView().findViewById(R.id.pensadorNumber);
         iaNumber = getView().findViewById(R.id.ia_number);
+        txtMachineWins = getView().findViewById(R.id.txt_machinewins);
         sendButton = getView().findViewById(R.id.sendbutton);
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //PENSADOR ES LA PERSONA
                 //ADIVINADOR LA COMPUTADORA
-
+                iaNumeroAdivinador.initAdivinador();
                 pensador.setNumeroPensado(Integer.parseInt(pensadorNumber.getText().toString()));
                 pensador.setListNumeroPensado(homeworkUtils.addNumbersToList(pensador.getNumeroPensado()));
                 iaNumber.setText("Anahi Rules");
+                iaNumeroAdivinador.executeInitialComparation(pensador.getListNumeroPensado());
                 while (iaNumeroAdivinador.getCifrasAcertadasActual().getCantidadNumAciertos() != 4) {
                     adivinador.setListNumberAdivinador(iaNumeroAdivinador.getNumeroPropuestoList());
                     adivinador.setNumeroSeleccionado(homeworkUtils.listToNumber(adivinador.getListNumberAdivinador()));
                     adivinador.setListNumberAdivinador(iaNumeroAdivinador.evaluateCifrasAcertadas(pensador.getListNumeroPensado()));
-                    iaNumber.setText(String.format("%04d", adivinador.getNumeroSeleccionado()));
                 }
+                iaNumber.setText("Numero en el que pensaste : " + iaNumeroAdivinador.getCifrasAcertadasActual().getNumero());
+                txtMachineWins.setVisibility(View.VISIBLE);
                 String ganamos = "Anahi Rules";
 
             }
@@ -77,10 +77,8 @@ public class PensadorFragment extends Fragment {
             }
         };
         pensadorNumber.setFilters(new InputFilter[]{filter});
-        iaNumber = getView().findViewById(R.id.ia_number);
-
-
     }
+
 
     /**
      * Crea un diálogo de alerta sencillo

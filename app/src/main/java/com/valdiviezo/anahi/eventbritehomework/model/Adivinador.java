@@ -3,6 +3,7 @@ package com.valdiviezo.anahi.eventbritehomework.model;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Adivinador {
     private static Adivinador adivinador = null;
 
