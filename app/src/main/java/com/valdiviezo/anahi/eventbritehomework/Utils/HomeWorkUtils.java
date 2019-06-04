@@ -103,13 +103,4 @@ import java.util.List;
         return respuesta;
     }
 
-     private int extractSimilarNumbers( List<CifrasAcertadas> listAciertos) {
-        String num ="";
-        for (int i = 0; i<4 ; i++) {
-            if (listAciertos.get(0).getList().contains(listAciertos.get(1).getList().get(i))) {
-                num += String.valueOf(listAciertos.get(0).getList().get(i));
-            }
-        }
-         return Integer.parseInt(num);
-     }
  }

@@ -64,7 +64,11 @@ public class IANumeroAdivinador {
         this.cifrasAcertadasActual = cifrasAcertadasActual;
     }
 
-
+    /**
+     * Retorna una lista que contiene 4 numeros regulares.
+     * @param listPensador
+     * @return
+     */
     public List<Integer> evaluateCifrasAcertadas(List<Integer> listPensador) {
         aciertosAnterior = cifrasAcertadasActual.getCantidadNumAciertos();
         cifrasAcertadasActual = homeWorkUtils.compareNumbers(listPensador, numeroPropuestoList);
@@ -119,6 +123,12 @@ public class IANumeroAdivinador {
         return num;
     }
 
+    /**
+     * Permuta una lista hasta hallar los 4 numeros en el orden correcto.
+     * @param adivinadorList
+     * @param pensadorList
+     * @return
+     */
     public List<Integer> permutarNumberList (List <Integer> adivinadorList, List pensadorList) {
         List <Integer> lista = adivinadorList;
         while (cifrasAcertadasActual.getCantidadNumCorrectos() != 4) {
