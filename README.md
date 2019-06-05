@@ -52,3 +52,24 @@ La permutación swap[1,2] es obligatoria sin importar si disminuye la cantidad d
 [35]49 | 1
 35[94] | 2
 3[95]4 | 4  -> resultado correcto 
+
+
+Links a cobertura de tests
+https://github.com/anahivaldiviezo/EventbriteHomeWork/blob/master/app/src/test/java/com/valdiviezo/anahi/eventbritehomework/HomeWorkUtilsTests.java
+https://github.com/anahivaldiviezo/EventbriteHomeWork/blob/master/app/src/test/java/com/valdiviezo/anahi/eventbritehomework/IANumeroAdivinadorTests.java
+
+Modelo
+https://github.com/anahivaldiviezo/EventbriteHomeWork/tree/master/app/src/main/java/com/valdiviezo/anahi/eventbritehomework/model
+
+Utils
+Aqui se encuentra toda la logica/metodos para los ejercicios
+https://github.com/anahivaldiviezo/EventbriteHomeWork/blob/master/app/src/main/java/com/valdiviezo/anahi/eventbritehomework/Utils/IANumeroAdivinador.java
+
+https://github.com/anahivaldiviezo/EventbriteHomeWork/blob/master/app/src/main/java/com/valdiviezo/anahi/eventbritehomework/Utils/HomeWorkUtils.java
+
+Layouts de las vistas 
+https://github.com/anahivaldiviezo/EventbriteHomeWork/tree/master/app/src/main/res/layout
+Manejo de las vistas, eventos.
+https://github.com/anahivaldiviezo/EventbriteHomeWork/tree/master/app/src/main/java/com/valdiviezo/anahi/eventbritehomework
+
+
