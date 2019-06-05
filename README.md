@@ -19,6 +19,7 @@ Evaluo mi numero inicial 0123 contra el numero del pensador , que me da como res
 El numero que ingresa el usuario es 5723
 
 [0]123 | 2 (2 correctos + 0 regulares)
+
 [4]123 | 2
 [5]123 | 3
 5[6]23 | 3
