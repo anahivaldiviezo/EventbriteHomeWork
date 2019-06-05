@@ -21,20 +21,29 @@ El numero que ingresa el usuario es 5723
 [0]123 | 2 (2 correctos + 0 regulares)
 
 [4]123 | 2
+
 [5]123 | 3
+
 5[6]23 | 3
+
 5[7]23 | 4 -> en este caso llego al resultado correcto sin permutaciones.
 
 
 Otro ejemplo 3954
 
-[0]123 | 1 Regular 0 correcto
+[0]123 | 1 Regular 0 correctos
+
 [4]123 | 2
+
 4[5]23 | 3
+
 45[6]3 | 3
+
 45[7]3 | 3
+
 45[8]3 | 3
-45[9]3 | 4 Regular 0correctos
+
+45[9]3 | 4 Regular 0 correctos
 
 Numero con 4 aciertos : 4593 —> necesita permutarse, hasta coincidir con el correcto.
 
@@ -47,11 +56,17 @@ En el caso de swap[0,1] , swap[2,3] si la cantidad de correctos disminuye, se re
 La permutación swap[1,2] es obligatoria sin importar si disminuye la cantidad de correctos ya que garantiza que los números se mezclen.
 
 4593 | 0 correctos
+
 [54]93 | 0
+
 54[39] | 0
+
 5[34]9 | 0
+
 [35]49 | 1
+
 35[94] | 2
+
 3[95]4 | 4  -> resultado correcto 
 
 
